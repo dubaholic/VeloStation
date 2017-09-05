@@ -2,10 +2,10 @@ angular.module('app.controllers', ['ngStorage'])
      
 .controller('mapCtrl', ['$scope', 'uiGmapGoogleMapApi','$localStorage', function($scope, uiGmapGoogleMapApi, $stateparams,$window,$localStorage) {
 
- //console.log(window.localStorage);
+
 
 var array = JSON.parse(localStorage.getItem("ngStorage-response"));
-console.log(array[5].straatnaam)
+
 
 function addInfoWindow(marker, message) {
 
@@ -43,14 +43,10 @@ var mapOptions = {
 }])
    
     .controller('VeloCtrl', function(VeloData, $scope, $localStorage) {
-        
+      
             VeloData.getVeloData()
                 .then(function(response){
                 $localStorage.response = response.data; 
-           
-                    console.log(response.data)
-                    
-                    console.log("object5: " + response.data[5]);
             
 
                  
@@ -64,8 +60,8 @@ var mapOptions = {
             
                 $scope.VeloDataStorage = $localStorage.response;
       
-
-                 console.log ("Data werkt wel " +  $localStorage.response)
+  
+            
                  
             })
 
