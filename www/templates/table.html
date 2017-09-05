@@ -1,0 +1,20 @@
+<ion-view title="Velostation" id="page8">
+    
+     
+           
+  <ion-content padding="true" class="has-header">
+      
+  <table style="width:100%">
+  <tr>
+    <th>Straatnaam</th>
+    <th>Latitude</th> 
+    <th>Longitude</th>
+  </tr>
+  <tr ng-repeat="item in VeloDataStorage">
+    <td>{{item.straatnaam}}</td>
+    <td>{{formatNumber(item.point_lat)}}</td> 
+    <td>{{formatNumber(item.point_lng)}}</td>
+  </tr>
+</table>
+
+</ion-view>
